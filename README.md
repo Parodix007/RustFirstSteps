@@ -1,0 +1,2 @@
+# RustFirstSteps
+Trying Rust
