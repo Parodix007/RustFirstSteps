@@ -8,17 +8,24 @@ struct Person {
 }
 
 impl Person {
-	fn set_person(_name: String, _last_name: String, age: u16, _email: String) -> Person {
+	fn set_person(name: String, last_name: String, age: u16, email: String) -> Person {
 		Person {
-			name: String::from(_name),
-			last_name: String::from(_last_name),
+			name,
+			last_name,
 			age,
-			email: String::from(_email)
+			email,
+		}
+	}
+
+	fn change_values(&mut self, type: String, value: String) -> RetType {
+		let _value = match value.trim().parse() {
+			Ok(result) => result,
+			Err(_)
 		}
 	}
 }
 fn main() {
-	let _person = Person::set_person("John", "Doe", 10, "abc@gmail.com");
+	let _person = Person::set_person(String::from("Johe"), String::from("Doe"), 10, String::from("abc@gmail.com"));
 
     println!("Hello, {:#?}", _person);
 }
