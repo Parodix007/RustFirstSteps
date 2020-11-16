@@ -1,0 +1,1 @@
+/Users/sebastiansiarczynski/Rust/RustFirstSteps/modules/target/debug/modules: /Users/sebastiansiarczynski/Rust/RustFirstSteps/modules/src/client.rs /Users/sebastiansiarczynski/Rust/RustFirstSteps/modules/src/lib.rs /Users/sebastiansiarczynski/Rust/RustFirstSteps/modules/src/main.rs /Users/sebastiansiarczynski/Rust/RustFirstSteps/modules/src/network/mod.rs
