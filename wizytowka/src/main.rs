@@ -3,10 +3,11 @@
 use std::io;
 use std::collections::HashMap;
 use termion;
-fn make_questions(){
+
+fn get_data() -> HashMap<String, String>{
 	let mut dane = HashMap::new();
 	for _ in 0..6 {
-		print!("{}",termion::clear::All);
+		print!("-------\n");
 		let mut nazwa_informacji = String::new();
 		let mut informacja = String::new();
 		println!("Wprowadz nazwe dla infomracji ktora wprowadzasz: ");
@@ -19,8 +20,11 @@ fn make_questions(){
 		dane.insert(nazwa_informacji, informacja);
 	}
 
-	println!("Z funkcji: {:?}", dane);
+	dane
 }
+
+
 fn main() {
-	make_questions()
+	let _dane = get_data();
+	print!("{:?}", _dane);
 }
