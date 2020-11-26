@@ -2,7 +2,6 @@
 
 use std::io;
 use std::collections::HashMap;
-use termion;
 
 fn get_data() -> HashMap<String, String>{
 	let mut dane = HashMap::new();
@@ -57,10 +56,11 @@ fn handle_data_error(mut hash_to_handle: HashMap<String,String>) {
 
 fn validate(hash_to_valid: HashMap<String, String>){
 	let mut zgoda = String::new();
-	let _hasmap = &hash_to_valid;
 
 	println!("WALIDACJA DANYCH-------");
-	iterate_over_hash(_hasmap);
+	for (key, value) in &hash_to_valid{
+		println!("{}: {}", key.trim(), value.trim());
+	}
 	println!("Czy dane sie zgadzaja?");
 	io::stdin().read_line(&mut zgoda)
 				.expect("Wprowadz informacje o poprawnosci");
@@ -68,6 +68,10 @@ fn validate(hash_to_valid: HashMap<String, String>){
 	if zgoda.trim().to_ascii_uppercase() == "TAK" {
 		println!("Dziekujemy za informacje");
 		println!("To twoje dane: ");
+
+		for (key, value) in &hash_to_valid{
+			println!("{}: {}", key.trim(), value.trim());
+		}
 	}else{
 		handle_data_error(hash_to_valid)
 	}
