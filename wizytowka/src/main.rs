@@ -2,6 +2,7 @@
 
 use std::io;
 use std::collections::HashMap;
+use termion;
 
 fn get_data() -> HashMap<String, String>{
 	let mut dane = HashMap::new();
@@ -58,6 +59,7 @@ fn validate(hash_to_valid: HashMap<String, String>){
 	let mut zgoda = String::new();
 
 	println!("WALIDACJA DANYCH-------");
+	print!("{}", termion::clear::All);
 	for (key, value) in &hash_to_valid{
 		println!("{}: {}", key.trim(), value.trim());
 	}
