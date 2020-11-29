@@ -42,4 +42,5 @@ fn main() {
     println!("expect with hand writed match to convert text content into file: {:?}", file_content1);
 
     // As long as I didint learn how to convert Ok into String third option is the best for me 
+    
 }
