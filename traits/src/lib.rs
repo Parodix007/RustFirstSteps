@@ -1,5 +1,8 @@
 pub mod traits {
-	
+	//-------------------------
+	// Cwiczenia na typach generycznych
+	use std::fmt::Display;
+
 	pub trait CalcField {
 		fn calc_field(&self) {
 			println!("Enter a valid values");
@@ -11,20 +14,20 @@ pub mod traits {
 		pub side: T,
 	}
 
-	impl<T> CalcField for Square<T>{
+	impl<T: Display> CalcField for Square<T>{
 		fn calc_field(&self) {
-			println!("Filed is : {}", (&self.side * &self.side));
+			println!("Filed is : {}", &self.side);
 		}
 	}
 
-	impl<T> Square<T> {
-		pub fn echo(&self) {
-			println!("ECHO");
-		}
-	}
+	//-------------------------
+	//Cwiczenia na lifetime
 
-	struct Rectangle<T, U> {
-		side: T,
-		side1: U,
+	pub fn longest(string1: String, string2: String) -> String {
+		if string1.len() > string2.len() {
+			string1
+		} else {
+			string2
+		}
 	}
 }

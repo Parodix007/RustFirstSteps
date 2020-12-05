@@ -1,10 +1,14 @@
 use traits::traits::Square;
-use traits::traits::CalcField;
+
+use traits::traits::longest;
 
 fn main() {
-	let costam = Square{
+	let _costam = Square{
 		side: 20,
 	};
 
-	costam.calc_field();
+	let _longest = longest(String::from("dupa"), String::from("dupaaa"));
+
+	println!("{:?}", _longest);
+	//costam.calc_field();
 }
