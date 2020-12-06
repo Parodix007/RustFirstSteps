@@ -3,7 +3,7 @@ pub mod traits {
 	// Cwiczenia na typach generycznych
 	use std::fmt::Display;
 
-	pub trait CalcField {
+	pub trait CalcField { // Traits are using to group function of purpose for example functions that are returning a field of some figure 
 		fn calc_field(&self) {
 			println!("Enter a valid values");
 		}
