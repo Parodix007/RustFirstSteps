@@ -23,7 +23,7 @@ pub mod traits {
 	//-------------------------
 	//Cwiczenia na lifetime
 
-	pub fn longest(string1: String, string2: String) -> String {
+	pub fn longest<'a>(string1: &'a String, string2: &'a String) -> &'a String {
 		if string1.len() > string2.len() {
 			string1
 		} else {

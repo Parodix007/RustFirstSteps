@@ -7,8 +7,9 @@ fn main() {
 		side: 20,
 	};
 
-	let _longest = longest(String::from("dupa"), String::from("dupaaa"));
+	let _string = String::from("dupa");
+	let _string1 = String::from("dupaa");
 
-	println!("{:?}", _longest);
+	println!("{:?}", _string) if longest(&_string, &_string1) == _string else println!("{:?}", _string1);
 	//costam.calc_field();
 }
